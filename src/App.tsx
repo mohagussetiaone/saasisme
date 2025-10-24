@@ -8,6 +8,7 @@ import Portfolio from "./landing/components/portfolio";
 import Footer from "./components/layouts/footer";
 import Navbar from "./components/layouts/navbar";
 import TrustedBy from "./landing/components/trusted-by";
+import Contact from "./landing/components/contact";
 
 function App() {
   const [, setIsScrolled] = useState(false);
@@ -29,6 +30,7 @@ function App() {
       <Features />
       <Portfolio />
       <TrustedBy />
+      <Contact />
       <Footer />
     </div>
   );

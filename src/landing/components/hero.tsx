@@ -10,7 +10,7 @@ const Hero = () => {
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
             backgroundImage: `url(${BannerImg})`,
-            filter: "blur(1px) brightness(1)", // Kombinasi blur dan brightness
+            filter: "blur(1px) brightness(1)",
           }}
         ></div>
 
@@ -19,12 +19,16 @@ const Hero = () => {
       </div>
 
       {/* Konten */}
-      <div className="container mx-auto px-4 z-10 text-center text-white">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">PT Solusi Aplikasi Andalan Semesta</h1>
+      <div className="mx-auto px-4 z-10 text-start md:text-center text-white">
+        <h1 className="text-lg md:text-3xl font-bold mb-4">PT Solusi Aplikasi Andalan Semesta</h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Solusi Software Terpercaya untuk Bisnis Modern</p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
-          <button className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg transition-colors">Jelajahi Layanan</button>
-          <button className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full text-lg transition-colors">Hubungi Kami</button>
+          <a href="#services" className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg transition-colors">
+            Jelajahi Layanan
+          </a>
+          <a href="#contact" className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full text-lg transition-colors">
+            Hubungi Kami
+          </a>
         </div>
         <div className="mt-12 border border-white/30 bg-white/10 backdrop-blur-md p-4 rounded-lg max-w-2xl mx-auto">
           <p className="text-lg">Leading Internet Service Provider in Indonesia</p>

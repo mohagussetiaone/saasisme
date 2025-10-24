@@ -12,7 +12,6 @@ const Footer = () => {
             <p className="text-xl">PT Solusi Aplikasi Andalan Semesta</p>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Kontak</h3>
               <ul className="space-y-2 text-gray-400">
                 <li className="flex items-start">
                   <svg className="h-5 w-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
