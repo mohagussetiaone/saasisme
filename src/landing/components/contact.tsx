@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Send } from "react-feather";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,11 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Terima kasih! Pesan Anda telah terkirim.");
+
+    // Menampilkan toast dari Sonner
+    toast.success("Data Anda sudah terkirim!");
+
+    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -40,7 +45,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           {/* Formulir Kontak */}
-          <div className="bg-white cols-span-3 md:col-span-2 rounded-xl shadow-md p-8">
+          <div className="bg-white cols-span-3 md:col-span-2 rounded-xl shadow-md p-8 text-start">
             <h3 className="text-xl font-semibold mb-6">Kirim Pesan</h3>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
@@ -84,7 +89,6 @@ const Contact = () => {
 
           {/* Informasi Kontak & Peta */}
           <div className="col-span-1">
-            {/* Peta */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <h3 className="text-xl font-semibold p-6 pb-0">Lokasi Kami</h3>
               <div className="p-1">

@@ -1,39 +1,95 @@
-// src/App.tsx
-import { useEffect, useState } from "react";
-import Hero from "./landing/components/hero";
-import About from "./landing/components/about";
-import Services from "./landing/components/services";
-import Features from "./landing/components/features";
-import Portfolio from "./landing/components/portfolio";
-import Footer from "./components/layouts/footer";
-import Navbar from "./components/layouts/navbar";
-import TrustedBy from "./landing/components/trusted-by";
-import Contact from "./landing/components/contact";
+import { Suspense } from "react";
+import { createBrowserRouter } from "react-router";
+import MainLayout from "./components/layouts/main-layouts";
+import Landing from "./landing/landing";
+import ProjectDetail from "./landing-details/landing-details";
+import NotFound from "./not-found/not-found";
 
-function App() {
-  const [, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <div className="font-sans text-gray-800">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Features />
-      <Portfolio />
-      <TrustedBy />
-      <Contact />
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    // element: <ProtectedRoute />,
+    children: [
+      {
+        element: <MainLayout />,
+        children: [
+          {
+            path: "/",
+            // loader: authLoader,
+            element: (
+              <Suspense fallback={<h1>Loading...</h1>}>
+                <Landing />
+              </Suspense>
+            ),
+          },
+          {
+            path: "/project/:projectId",
+            // loader: authLoader,
+            element: (
+              <Suspense fallback={<h1>Loading...</h1>}>
+                <ProjectDetail />
+              </Suspense>
+            ),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+  // {
+  //   path: "/error",
+  //   element: <PageError />,
+  // },
+  // {
+  //   path: "/signin",
+  //   loader: authLoader,
+  //   element: (
+  //     <Suspense fallback={<PageLoader />}>
+  //       <SignIn />
+  //     </Suspense>
+  //   ),
+  // },
+  // {
+  //   path: "/signup",
+  //   element: (
+  //     <Suspense fallback={<PageLoader />}>
+  //       <Register />
+  //     </Suspense>
+  //   ),
+  // },
+  // {
+  //   path: "/signup/error",
+  //   element: (
+  //     <Suspense fallback={<PageLoader />}>
+  //       <ErrorPage />
+  //     </Suspense>
+  //   ),
+  // },
+  // {
+  //   path: "/request-reset-password",
+  //   element: (
+  //     <Suspense fallback={<PageLoader />}>
+  //       <EmailRequestReset />
+  //     </Suspense>
+  //   ),
+  // },
+  // {
+  //   path: "/reset-password",
+  //   element: (
+  //     <Suspense fallback={<PageLoader />}>
+  //       <PasswordReset />
+  //     </Suspense>
+  //   ),
+  // },
+  // {
+  //   path: "/invalid-invite",
+  //   element: (
+  //     <Suspense fallback={<PageLoader />}>
+  //       <EmailInvitationExpired />
+  //     </Suspense>
+  //   ),
+  // },
+]);

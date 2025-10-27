@@ -1,19 +1,20 @@
-import alfamartImg from "@/assets/images/partner/alfamart.png";
-import bpkPenaburImg from "@/assets/images/partner/bpk-penabur.png";
-import bsiImg from "@/assets/images/partner/bsi.png";
-import budiLuhurImg from "@/assets/images/partner/budi-luhur.png";
-import rsudKabBekasiImg from "@/assets/images/partner/rsud-kab-bekasi.png";
-import iconMediaImg from "@/assets/images/partner/iconmedia.png";
+import remalaImg from "@/assets/images/logo/logoremala.png";
+import tachyonImg from "@/assets/images/logo/tachyon.png";
+import lawsonImg from "@/assets/images/logo/lawson.png";
+import rsPermataImg from "@/assets/images/logo/rspermata.png";
+import fmiImg from "@/assets/images/logo/fmi.png";
+import nethomeImg from "@/assets/images/logo/nethome.png";
+import fkiImg from "@/assets/images/logo/fki.png";
 
 const TrustedBy = () => {
-  // Data perusahaan partner (dalam implementasi nyata, ganti dengan logo asli)
   const partners = [
-    { id: 1, img: alfamartImg, name: "PT Alfamart", industry: "Ritel" },
-    { id: 2, img: bpkPenaburImg, name: "BPK Penabur", industry: "Pendidikan" },
-    { id: 3, img: bsiImg, name: "Universitas Bina sarana informatika", industry: "Pendidikan" },
-    { id: 4, img: budiLuhurImg, name: "Budi Luhur", industry: "Pendidikan" },
-    { id: 5, img: rsudKabBekasiImg, name: "RSUD Kabupaten Bekasi", industry: "Kesehatan" },
-    { id: 6, img: iconMediaImg, name: "PT Icon Media", industry: "Media" },
+    { id: 1, img: remalaImg, name: "PT Remala Abadi Tbk", industry: "Ritel" },
+    { id: 2, img: fmiImg, name: "PT Fibermedia Indonesia", industry: "Kesehatan" },
+    { id: 3, img: tachyonImg, name: "Tachyon Net", industry: "Pendidikan" },
+    { id: 4, img: lawsonImg, name: "Lawson Indonesia", industry: "Pendidikan" },
+    { id: 5, img: rsPermataImg, name: "Rumah Sakit Permata Bekasi", industry: "Pendidikan" },
+    { id: 6, img: nethomeImg, name: "Nethome.Id", industry: "Media" },
+    { id: 7, img: fkiImg, name: "Fiberkerumah Indonesia", industry: "Media" },
   ];
 
   // Duplikasi data untuk membuat animasi loop yang mulus
@@ -36,8 +37,8 @@ const TrustedBy = () => {
                 <div className="w-20 h-20 mb-4 flex items-center justify-center bg-white rounded-lg shadow-sm">
                   <img src={partner.img} alt={partner.name} className="w-16 h-16 object-contain" />
                 </div>
-                <h3 className="font-semibold text-center text-sm">{partner.name}</h3>
-                <p className="text-gray-500 text-xs text-center mt-1">{partner.industry}</p>
+                <h3 className="font-semibold text-center text-sm whitespace-nowrap">{partner.name}</h3>
+                {/* <p className="text-gray-500 text-xs text-center mt-1">{partner.industry}</p> */}
               </div>
             ))}
           </div>
@@ -53,7 +54,7 @@ const TrustedBy = () => {
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
               />
             </svg>
-            <span className="text-blue-800 font-medium">10+ Perusahaan telah mempercayai kami</span>
+            <span className="text-blue-800 font-medium">7+ Perusahaan telah mempercayai kami</span>
           </div>
         </div>
       </div>

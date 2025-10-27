@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <img src={LogoImg} alt="SAAS Logo" width={80} height={80} />
             </div>
-            <p className="text-xl">PT Solusi Aplikasi Andalan Semesta</p>
+            <p className="text-xl mb-6">PT Solusi Aplikasi Andalan Semesta</p>
 
             <div>
               <ul className="space-y-2 text-gray-400">
@@ -29,7 +29,7 @@ const Footer = () => {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  <span>(021) 1234-5678</span>
+                  <span>(021) 83709269</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-5 w-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@ const Footer = () => {
                   Integrasi Sistem
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-gray-400 hover:text-white">
                   Cloud Solutions
                 </a>
@@ -63,7 +63,7 @@ const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-white">
                   Keamanan Siber
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
                   Konsultasi IT
@@ -80,7 +80,7 @@ const Footer = () => {
                   Tentang Kami
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-gray-400 hover:text-white">
                   Karir
                 </a>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-white">
                   Blog
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
                   Partner

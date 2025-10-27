@@ -45,7 +45,7 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-blue-600 text-white p-8 rounded-2xl">
+        {/* <div className="mt-16 bg-blue-600 text-white p-8 rounded-2xl">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-2/3 mb-6 md:mb-0">
               <h3 className="text-2xl font-bold mb-2">Butuh Solusi Khusus?</h3>
@@ -55,7 +55,7 @@ const Services = () => {
               <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors">Konsultasi Gratis</button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
