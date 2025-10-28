@@ -13,12 +13,7 @@ const Footer = () => {
 
             <div>
               <ul className="space-y-2 text-gray-400">
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span>Ujung Menteng</span>
+                <li className="flex">
                   <span>Ruko Inkopau Blok J3 Jl Raya Bekasi KM 25 RT 15 RW 01, Ujung Menteng Kecamatan Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13960</span>
                 </li>
                 <li className="flex items-start">
@@ -32,12 +27,6 @@ const Footer = () => {
                   </svg>
                   <span>(021) 83709269</span>
                 </li>
-                {/* <li className="flex items-start">
-                  <svg className="h-5 w-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span>info@saas.co.id</span>
-                </li> */}
               </ul>
             </div>
           </div>
@@ -46,27 +35,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Layanan</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="/#portfolio" className="text-gray-400 hover:text-white">
                   Pengembangan Aplikasi
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="/#portfolio" className="text-gray-400 hover:text-white">
                   Integrasi Sistem
                 </a>
               </li>
-              {/* <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Cloud Solutions
-                </a>
-              </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Keamanan Siber
-                </a>
-              </li> */}
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="/#services" className="text-gray-400 hover:text-white">
                   Konsultasi IT
                 </a>
               </li>
@@ -77,27 +56,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Perusahaan</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="/#about" className="text-gray-400 hover:text-white">
                   Tentang Kami
                 </a>
               </li>
-              {/* <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Karir
-                </a>
-              </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Blog
-                </a>
-              </li> */}
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="/#trusted-by" className="text-gray-400 hover:text-white">
                   Partner
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="https://remala.id/aboutus/profile" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                   Remala Group
                 </a>
               </li>

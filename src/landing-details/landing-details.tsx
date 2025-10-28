@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import nethomeIdProject from "@/assets/images/projects/nethome-project.png";
 import nethomeClientProject from "@/assets/images/projects/nethome-clientarea-project.png";
@@ -47,7 +47,7 @@ const projectsData = [
     fullDescription: "Platform Client Area Fibermedia menyediakan solusi manajemen layanan internet yang komprehensif untuk pelanggan korporat dan individual.",
     technologies: ["React", "Next.js", "PostgreSQL", "Tailwind CSS"],
     features: ["Manajemen layanan internet", "Monitoring kualitas koneksi", "Laporan penggunaan bandwidth", "Support ticket system"],
-    year: 2023,
+    year: 2025,
     client: "Fibermedia",
   },
   {
@@ -59,7 +59,7 @@ const projectsData = [
     fullDescription: "Mid ERP adalah sistem middleware yang mengintegrasikan berbagai payment gateway untuk memproses transaksi dengan aman dan efisien.",
     technologies: ["Node.js", "Express", "PostgreSQL", "Redis", "Docker"],
     features: ["Integrasi multi-payment gateway", "Enkripsi transaksi tingkat enterprise", "Monitoring real-time", "Reconciliation otomatis", "API documentation lengkap"],
-    year: 2023,
+    year: 2025,
     client: "PT Remala Abadi",
   },
   {
@@ -71,7 +71,7 @@ const projectsData = [
     fullDescription: "Sistem WEB ODN adalah aplikasi manajemen aset yang dirancang untuk mencatat dan melacak semua peralatan Optical Distribution Network.",
     technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     features: ["Pencatatan aset ODN", "Tracking lokasi peralatan", "Maintenance scheduling", "Laporan aset berkala", "QR code scanning"],
-    year: 2023,
+    year: 2025,
     client: "PT Remala Abadi",
   },
   {
@@ -83,7 +83,7 @@ const projectsData = [
     fullDescription: "Platform WEB OLT adalah sistem manajemen terpusat untuk mengaktifasi, memonitor, dan mengelola Optical Line Terminal yang tersebar di berbagai lokasi.",
     technologies: ["React", "Node.js", "PostgreSQL", "Socket.io", "Tailwind CSS"],
     features: ["Aktivasi OLT remote", "Real-time monitoring", "Manajemen hak akses", "Alert system", "Multi-region management"],
-    year: 2023,
+    year: 2024,
     client: "PT Remala Abadi",
   },
   {
@@ -95,7 +95,7 @@ const projectsData = [
     fullDescription: "Platform Smart WiFi Lawson adalah solusi inovatif yang menyediakan internet gratis kepada pelanggan sambil mengumpulkan data analytics untuk meningkatkan pengalaman berbelanja.",
     technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
     features: ["WiFi hotspot management", "User authentication", "Analytics dashboard", "Promotional integration", "Bandwidth management"],
-    year: 2023,
+    year: 2025,
     client: "Lawson Indonesia",
   },
   {
@@ -107,7 +107,7 @@ const projectsData = [
     fullDescription: "Website Spin adalah platform interaktif untuk mengadakan undian hadiah menarik di acara pameran dan event khusus.",
     technologies: ["React", "Next.js", "Firebase", "Tailwind CSS"],
     features: ["Spin wheel interaktif", "Prize management", "Winner tracking", "Real-time leaderboard", "Mobile responsive"],
-    year: 2023,
+    year: 2025,
     client: "Event Organizer",
   },
 ];
@@ -115,9 +115,12 @@ const projectsData = [
 export default function ProjectDetail() {
   const { projectId } = useParams<{ projectId: string }>();
   const project = projectsData.find((p) => p.id === Number(projectId));
-  console.log("proj", project);
 
   const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [projectId]);
 
   if (!project) {
     return (
@@ -168,8 +171,13 @@ export default function ProjectDetail() {
       <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="relative h-96 md:h-[500px] bg-gray-200 rounded-xl overflow-hidden shadow-lg">
-              <img src={project.imageUrl || "/placeholder.svg"} alt={project.title} className={`w-full h-full object-cover transition-opacity duration-500 ${imageLoaded ? "opacity-100" : "opacity-0"}`} onLoad={() => setImageLoaded(true)} />
+            <div className="relative h-96 md:h-[500px] bg-white rounded-xl overflow-hidden shadow-lg">
+              <img
+                src={project.imageUrl || "/placeholder.svg"}
+                alt={project.title}
+                className={`w-full h-full object-contain transition-opacity duration-500 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+                onLoad={() => setImageLoaded(true)}
+              />
               {!imageLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
                   <div className="animate-pulse">
@@ -256,7 +264,7 @@ export default function ProjectDetail() {
                 .filter((p) => p.id !== Number(projectId))
                 .slice(0, 2)
                 .map((relatedProject) => (
-                  <Link key={relatedProject.id} to={`/projects/${relatedProject.id}`}>
+                  <Link key={relatedProject.id} to={`/project/${relatedProject.id}`}>
                     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer h-full">
                       <div className="h-40 overflow-hidden bg-gray-100">
                         <img src={relatedProject.imageUrl || "/placeholder.svg"} alt={relatedProject.title} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />

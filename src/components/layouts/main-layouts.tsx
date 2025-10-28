@@ -6,7 +6,7 @@ const MainLayout = () => {
   return (
     <main>
       <Navbar />
-      <div className="mb-auto text-center h-auto min-h-screen md:min-h-[calc(100vh-64px)] overflow-x-hidden">
+      <div className="mb-auto h-auto min-h-screen md:min-h-[calc(100vh-64px)] overflow-x-hidden">
         <Outlet />
       </div>
       <Footer />

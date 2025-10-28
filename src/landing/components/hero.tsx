@@ -20,15 +20,17 @@ const Hero = () => {
 
       {/* Konten */}
       <div className="mx-auto px-4 z-10 text-start md:text-center text-white">
-        <h1 className="text-lg md:text-3xl font-bold mb-4">PT Solusi Aplikasi Andalan Semesta</h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Solusi Software Terpercaya untuk Bisnis Modern</p>
-        <div className="flex flex-col md:flex-row justify-center gap-4">
-          <a href="#services" className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg transition-colors">
-            Jelajahi Layanan
-          </a>
-          <a href="#contact" className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full text-lg transition-colors">
-            Hubungi Kami
-          </a>
+        <h3 className="text-3xl md:text-5xl mb-4">PT Solusi Aplikasi Andalan Semesta</h3>
+        <p className="text-sm md:text-2xl mb-8 max-w-3xl mx-auto">Solusi Software Terpercaya untuk Bisnis</p>
+        <div className="inline-block justify-center text-center">
+          <div className="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#services" className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg transition-colors">
+              Jelajahi Layanan
+            </a>
+            <a href="#contact" className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full text-lg transition-colors">
+              Hubungi Kami
+            </a>
+          </div>
         </div>
         <div className="mt-12 border border-white/30 bg-white/10 backdrop-blur-md p-4 rounded-lg max-w-2xl mx-auto">
           <p className="text-lg">Leading Internet Service Provider in Indonesia</p>

@@ -21,7 +21,7 @@ const TrustedBy = () => {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden" id="trusted-by">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Telah Dipercaya Oleh</h2>
