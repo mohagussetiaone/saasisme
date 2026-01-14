@@ -26,7 +26,6 @@ const TrustedBy = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Telah Dipercaya Oleh</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">Perusahaan-perusahaan terkemuka yang telah mempercayai solusi software kami</p>
         </div>
 
         {/* Container untuk animasi bergerak */}

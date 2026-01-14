@@ -93,11 +93,10 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 max-w-7xl mx-auto">
+      <div className="container px-4 max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfolio Kami</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-gray-600 text-lg">Proyek-Proyek Terbaru yang Telah Kami Selesaikan</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

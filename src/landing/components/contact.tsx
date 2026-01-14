@@ -40,7 +40,6 @@ const Contact = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Hubungi Kami</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">Kami siap membantu Anda. Silakan hubungi kami untuk informasi lebih lanjut tentang produk dan layanan kami.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
