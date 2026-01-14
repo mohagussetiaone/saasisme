@@ -34,7 +34,7 @@ const Features = () => {
         <div className="absolute inset-0 bg-cover bg-center bg-fixed opacity-5" style={{ backgroundImage: `url('https://source.unsplash.com/random/1920x1080/?abstract,blue')` }}></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container px-4 relative z-10 max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Mengapa Memilih SAAS?</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
@@ -45,11 +45,6 @@ const Features = () => {
           {features.map((feature, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-blue-200 transition-colors duration-300">
               <div className="flex items-start">
-                <div className="mr-4 mt-1">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="text-blue-600 font-bold">{index + 1}</span>
-                  </div>
-                </div>
                 <div>
                   <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>

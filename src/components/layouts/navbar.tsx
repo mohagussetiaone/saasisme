@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 bg-white w-full z-50 transition-all duration-300">
-      <div className="container mx-auto p-2 flex justify-between items-center">
+      <div className="container p-2 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center space-x-2">
           <Link to="/" className="flex items-center justify-center">
             <img src={LogoImg} width={80} height={80} alt="Logo" />

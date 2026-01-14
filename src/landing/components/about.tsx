@@ -4,7 +4,7 @@ import LogoRemala from "@/assets/images/logo/logoremala.png";
 const About = () => {
   return (
     <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Tentang kami</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>

@@ -1,30 +1,35 @@
+import Menu1Img from "@/assets/images/banner/asset-1.png";
+import Menu2Img from "@/assets/images/banner/asset-2.png";
+import Menu3Img from "@/assets/images/banner/asset-3.png";
+import Menu4Img from "@/assets/images/banner/asset-4.png";
+
 const Services = () => {
   const services = [
     {
       title: "Pengembangan Aplikasi Kustom",
       description: "Solusi software tailor-made sesuai kebutuhan bisnis spesifik Anda",
-      icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
+      img: Menu1Img,
     },
     {
       title: "Integrasi Sistem",
       description: "Menghubungkan berbagai sistem untuk alur kerja yang efisien",
-      icon: "M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4",
+      img: Menu2Img,
     },
     {
       title: "Cloud Solutions",
       description: "Solusi berbasis cloud untuk skalabilitas dan aksesibilitas maksimal",
-      icon: "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z",
+      img: Menu3Img,
     },
     {
       title: "Keamanan Siber",
       description: "Perlindungan komprehensif untuk aset digital perusahaan Anda",
-      icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+      img: Menu4Img,
     },
   ];
 
   return (
     <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Layanan Kami</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
@@ -34,10 +39,8 @@ const Services = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={service.icon} />
-                </svg>
+              <div className="w-20 h-20 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <img src={service.img} alt={service.title} className="w-20 h-20" />
               </div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>

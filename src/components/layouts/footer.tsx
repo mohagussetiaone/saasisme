@@ -2,8 +2,8 @@ import LogoImg from "@/assets/images/logo/logo-light.jpg";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto px-4">
+    <footer id="contact" className="bg-gray-900 text-white py-8">
+      <div className="container px-4 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} PT Solusi Aplikasi Andalan Semesta. All rights reserved.</p>
-          <p className="text-gray-400 text-sm mt-4 md:mt-0">Member of PT Remala Abadi Tbk (Remala Group)</p>
+          <p className="text-gray-400 text-sm mt-4 md:mt-0">Member of PT Remala Abadi Tbk</p>
         </div>
       </div>
     </footer>
